@@ -1,0 +1,92 @@
+.navbar{
+    
+    background-image:linear-gradient( rgb(255, 255, 255), rgba(0, 255, 30, 0.634)) !important;
+
+}
+.navbar-brand{
+    color: rgba(0, 104, 28, 0.656);
+   
+}
+
+.offcanvas-body{
+    font-size: 30px;
+    font-weight: bold;
+    font-style: italic;
+}
+.homedes{ 
+background-size: 100% 100%; 
+background-repeat: no-repeat;
+}
+.dropdown-item{
+    font-weight: bold;
+    font-style: italic;
+    font-size: 20px;
+    
+}
+.heading1{
+    color: rgb(0, 0, 0);
+    justify-content: center;
+    display: flex;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight:  bold;
+}
+.h1para{
+    color: rgb(255, 255, 255);
+    justify-content: center;
+    display: flex;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight:  bold;
+}
+
+.p1{
+    font-size: 30px;
+    color: rgb(250, 249, 249) ;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    width: 70%;
+}
+
+  @media screen and (max-width: 600px) {
+    .heading1{
+        font-size: 30px;
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+    }
+    #carouselExampleInterval{
+       
+        border: 2px solid rgb(0, 200, 23);
+    }
+    .p1{
+      font-size: 18px;
+      font-style: normal;
+      color: whitesmoke;
+      
+      
+    }
+    .offcanvas-body{
+        background-color: whitesmoke;
+    }
+    .homedes{
+        background-image:url("./8.jpg")
+    }  
+    .h1para{
+        color: black;
+    }  
+
+  }
+  @media screen and (min-width: 600px){
+    #carouselExampleInterval{
+       height: auto !important;
+       width: 45%;
+       border: 5px solid rgb(0, 0, 0);
+       margin-left: 30%;
+    }
+    .homedes{
+        background-image: url(./34.jpg);  
+    }
+    .p1{
+        width: 60%;
+    }
+  }

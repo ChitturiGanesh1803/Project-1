@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Document</title>
+    <link rel="stylesheet" href="specialmenu.css">
+</head>
+<body>
+    <!--navbar-->
+      <nav class="navbar bg-light">
+        <div class="container-fluid bg-dark-subtle text-dark-emphasisdark-subtle text-dark-emphasis "  style=" height: 70px; font-weight: bold;font-size: 30px;">
+          <!--brand name-->
+            <a class="navbar-brand">Food Menu<header>
+        </header></a>
+        <!--search-->
+        <form class="d-flex" role="search" id="searchForm">
+            <input class="form-control me-2" type="search" id="searchInput" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        
+        </div>
+      </nav>
+
+    <main>
+        <section class="product-listing product-container">
+            
+            <div class="product" id="Dosa">
+                <img src="./Final css/Dosa.jpg" alt="Product 1">
+                <h2>Dosa</h2>
+                <p>Rs-100.00</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product" id="Gobiparantha">
+                <img src="./Final css/Gobiparantha.jpg" alt="Product 2">
+                <h2>Gobiparantha</h2>
+                <p>RS-160.00</p>
+                <button>Add to Cart</button>
+            </div>
+                <div class="product" id="Paneerparantha">
+                    <img src="./Final css/Paneerparantha.jpg" alt="Product 3">
+                    <h2>Paneerparantha</h2>
+                    <p>Rs-250.00</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product" id="Pyazparantha">
+                    <img src="./Final css/Pyazparantha.jpg" alt="Product 4">
+                    <h2>Pyazparantha</h2>
+                    <p>Rs-200.00</p>
+                    <button>Add to Cart</button>
+            </div>
+            <div class="product" id="Burger">
+                <img src="./Final css/Burger.pg.jpg" alt="Product 5">
+                <h2>Burger</h2>
+                <p>Rs-100.00</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product" id="Pizza">
+                <img src="./Final css/Pizza.jpg" alt="Product 6">
+                <h2>Pizza</h2>
+                <p>Rs-250.00</p>
+                <button>Add to Cart</button>
+            </div>
+                <div class="product" id="Pavbhaji">
+                    <img src="./Final css/Pavbhaji.jpg" alt="Product 7">
+                    <h2>Pavbhaji</h2>
+                    <p>Rs-120.00</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product" id="Alooparantha">
+                    <img src="./Final css/Alooparantha.jpg" alt="Product 8">
+                    <h2>spl-Alooparantha</h2>
+                    <p>Rs-80.00</p>
+                    <button>Add to Cart</button>
+            </div>
+            <div class="product" id="Butterscotchshake">
+                <img src="./Final css/Butterscotchshake.jpg" alt="Product 9">
+                <h2>Butterscotch<br>shake</h2>
+                <p>Rs-150.00</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product" id="Strawberryshake">
+                <img src="./Final css/Strawberryshake.jpg" alt="Product 10">
+                <h2>Strawberry<br>shake</h2>
+                <p>Rs-130.00</p>
+                <button>Add to Cart</button>
+            </div>
+                <div class="product" id="Chocolateshake">
+                    <img src="./Final css/Chocolateshake.jpg" alt="Product 11">
+                    <h2>Chocolate<br>shake</h2>
+                    <p>Rs-180.00</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product" id="Vanillashake">
+                    <img src="./Final css/Vanillashake.jpg" alt="Product 12">
+                    <h2>Vanilla<br>shake</h2>
+                    <p>Rs-110.00</p>
+                    <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="product1.jpg" alt="Product 13">
+                <h2>Product 13</h2>
+                <p>Rs--.00</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="product2.jpg" alt="Product 14">
+                <h2>Product 14</h2>
+                <p>Rs---.00</p>
+                <button>Add to Cart</button>
+            </div>
+        </section>
+    </main>
+  
+
+    <script>
+        document.getElementById('searchForm').addEventListener('submit', function(event) {
+          event.preventDefault();
+      
+          const searchInput = document.getElementById('searchInput');
+          const searchTerm = searchInput.value.toLowerCase();
+      
+          const products = document.getElementsByClassName('product');
+      
+          for (const product of products) {
+            const productName = product.getElementsByTagName('h2')[0].innerText.toLowerCase();
+      
+            if (productName.includes(searchTerm)) {
+              product.style.display = 'block';
+            } else {
+              product.style.display = 'none';
+            }
+          }
+      
+          searchInput.value = '';
+        });
+      </script>
+</body>
+
+</html>
